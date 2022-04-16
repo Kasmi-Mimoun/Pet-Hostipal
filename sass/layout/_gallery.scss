@@ -1,0 +1,136 @@
+
+.gallery-title{
+  width: 100%;
+  .container{
+    width: 100%;
+    max-width: 1260px;
+    margin: 60px auto;
+    padding: 20px ;
+    @include flex-sp-between;
+    @include break(mobile){
+      padding: 0 30px;
+      flex-direction: column-reverse;
+    }
+    .g-text{
+      width: 50%;
+      min-width: 360px;
+      @include break(mobile){
+        width: 100%;
+        min-width: 300px;
+      }
+      h1{
+        font-size: 74px;
+        font-weight: 800;
+        color: $dark-color;
+        text-transform: capitalize;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        @include break(tablette){
+          font-size: 40px;
+        }
+        @include break(mobile){
+          font-size: 48px;
+        }
+        span{
+          font-size: 40px;
+          font-weight: 400;
+          @include break(tablette){
+            font-size: 26px;
+          }
+          @include break(mobile){
+            font-size: 30px;
+          }
+        }
+      }
+    }
+    .g-img{
+      width: 50%;
+      min-width: 300px;
+      @include break(mobile){
+        min-width: 200px;
+        align-self: flex-start;
+      }
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+.gallery-images{
+  width: 100%;
+  margin-bottom: 80px;
+  .container{
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 20px ;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    @include break(mobile){
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .img-wrapper{
+      position: relative;
+      border-radius: 30%;
+      overflow: hidden;
+      &:hover .overly{
+        height: 35%;
+      }
+      img{
+        width: 100%;
+        
+      }
+      .overly{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0;
+        padding: 0 20px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.02) 30%, rgba(0,9,88,1) 100%);
+        color: $light-color;
+        @include flex-sp-around;
+        transition: $med-tr;
+        h2{
+          font-size: 20px;
+        }
+        p{
+          font-size: 14px;
+        }
+      }
+    }
+
+  }
+  .load{
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 60px ;
+    text-align: center;
+    a{
+      padding: 26px 50px;
+      border-radius: 40px;
+      background-color: $orange-color;
+      color: $light-color;
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: capitalize;
+      @include break(tablette){
+        font-size: 18px;
+        padding: 20px 30px;
+        margin-bottom: 20px;
+      }
+      svg{
+        width: 19px;
+        height: 19px;
+        @include break(tablette){
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+  }
+}

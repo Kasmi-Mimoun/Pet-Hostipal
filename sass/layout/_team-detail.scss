@@ -1,0 +1,144 @@
+.card{
+  width: 100%;
+  margin: 80px 0;
+  .container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 940px;
+    @include flex-sp-between;
+    background: #FFFFFF;
+    box-shadow: 3px 3px 15px rgba(0, 9, 88, 0.15);
+    border-radius: 100px;
+    overflow: hidden;
+    @include break(tablette){
+      width: 95%;
+    }
+    @include break(mobile){
+      width: 80%;
+      border-radius: 60px;
+      @include flex-column-center;
+    }
+    .card-img{
+      width: 40%;
+      @include break(mobile){
+        width: 100%;
+        height: 240px;
+        overflow: hidden;
+      }
+      img{
+        width: 100%;
+      }
+    }
+    .card-text{
+      width: 58%;
+      padding-left: 30px;
+      @include break(mobile){
+        width: 100%;
+        padding: 40px 15px;
+      }
+      .special{
+        font-weight: normal;
+        font-size: 28px;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+        color: $orange-color;
+        @include break(tablette){
+          font-size: 22px;
+        }
+        @include break(mobile){
+          font-size: 20px;
+        }
+      }
+      .name{
+        color: $dark-color;
+        font-size: 74px;
+        letter-spacing: 2px;
+        @include break(tablette){
+          font-size: 54px;
+        }
+        @include break(mobile){
+          font-size: 34px;
+        }
+      }
+      .para_1{
+        font-size: 17px;
+        width: 85%;
+        margin: 10px 0 20px;
+        @include break(tablette){
+          font-size: 16px;
+        }
+        @include break(mobile){
+          width: 100%;
+          text-align: justify;
+        }
+      }
+      .link img{
+        width: 40px;
+        margin-right: 20px;
+        @include break(tablette){
+          width: 30px;
+          margin-right: 10px;
+        }
+        @include break(mobile){
+          width: 30px;
+          margin-right: 10px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+.details{
+  width: 100%;
+  margin: 80px 0;
+  .biography, .education, .interest{
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 30px 60px;
+    @include break(mobile){
+      padding: 30px 20px;
+    }
+    .sub-title{
+      font-size: 36px;
+      margin-bottom: 20px;
+      @include break(tablette){
+        font-size: 32px;
+      }
+      @include break(mobile){
+        font-size: 28px;
+      }
+    }
+    ul{
+      margin-left: 30px;
+      li{
+        line-height: 2.5;
+        position: relative;
+        &::before{
+          content: "";
+          width: 6px;
+          height: 6px;
+          background-color: $dark-color;
+          border-radius: 50%;
+          position: absolute;
+          left: -20px;
+          top: 22px;
+          @include break(tablette){
+            left: -20px;
+            top: 18px;
+          }
+        }
+      }
+    }
+    .para_1{
+      font-size: 20px;
+      @include break(tablette){
+        font-size: 16px;
+      }
+      @include break(mobile){
+        font-size: 16px;
+        text-align: justify;
+      }
+    }
+  }
+}

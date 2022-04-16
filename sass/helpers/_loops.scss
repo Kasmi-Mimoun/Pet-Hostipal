@@ -1,0 +1,55 @@
+// for 
+
+@for $i from 1 through 10 {
+  .class-#{$i} {
+    background-color: #eee;
+    font-size: 14px + ($i * 2);
+  }
+}
+
+@for $i from 1 to 5 {
+  .box-#{$i} {
+    color: #131313;
+    padding: 10px * $i;
+  }
+}
+
+// each and maps
+
+// simple each
+$themes: red, green, blue;
+@each $theme in $themes {
+  .#{$theme} {
+    color: $theme;
+    border-bottom: $theme;
+  }
+}
+
+// each with destructure 
+$classes: "one" 24px red, "two" 36px black, "three" 18px #e1e1e1;
+@each $class, $font, $color in $classes {
+  .#{$class} {
+    font-size: $font;
+    color: $color;
+    padding: $font $font/2;
+  }
+}
+
+// each for object properties
+$social: ('youtube': red, 'facebook': blue, 'github': black);
+@each $key, $value in $social {
+  .#{$key} {
+    background-color: $value;
+    color: white;
+    padding: 10px 20px;
+  }
+}
+
+
+$index : 0;
+@while $index <= 8 {
+  .index-#{$index + 1} {
+    width: 100px * $index;
+  }
+  $index: $index + 1;
+}

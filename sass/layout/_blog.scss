@@ -1,0 +1,108 @@
+.article{
+  position: relative;
+  width: 100%;
+  .container{
+    max-width: 1260px;
+    margin: 80px auto 0;
+    padding: 0 30px;
+    @include break(mobile){
+      padding: 0 15px;
+      margin: 40px auto 0;
+    }
+    .article-heading{
+      width: 100%;
+      @include flex-sp-between;
+      @include break(mobile){
+        @include flex-column-center;
+      }
+      .article-img{
+        width: 45%;
+        @include break(mobile){
+          width: 100%;
+        }
+        img{
+          width: 100%;
+        }
+      }
+      .article-title{
+        width: 50%;
+        @include break(mobile){
+          width: 100%;
+        }
+        .sub-title{
+          @include break(tablette){
+            font-size: 40px;
+          }
+          @include break(mobile){
+            margin-top: 20px;
+            font-size: 28px;
+          }
+        }
+      }
+    }
+    .article-author{
+      width: 100%;
+      padding: 40px 0 20px;
+      @include flex-end;
+      @include break(mobile){
+        padding: 20px 0;
+        justify-content: flex-start;
+      }
+      img, h5, p{
+        margin-left: 20px;
+        @include break(mobile){
+          margin-left: 10px;
+        }
+      }
+      h5{
+        font-size: 18px;
+        color: $dark-color;
+        @include break(mobile){
+          font-size: 14px;
+        }
+      }
+      p{
+        @include break(mobile){
+          font-size: 12px;
+        }
+      }
+    }
+    .article-wrap{
+      width: 100%;
+      @include flex-sp-between;
+      align-items: flex-start;
+      @include break(mobile){
+        @include flex-column-center;
+      }
+      .article-detail{
+        width: 80%;
+        margin: 20px 0;
+        @include break(mobile){
+          width: 95%;
+        }
+        p{
+          margin-bottom: 30px;
+          text-indent: 60px;
+          text-align: justify;
+        }
+      }
+      .aside{
+        width: 15%;
+        margin: 20px 0;
+        @include break(mobile){
+          width: 100%;
+          margin: 0;
+          @include flex-sp-around;
+        }
+        img{
+          width: 100%;
+          margin-bottom: 30px;
+          @include break(mobile){
+            width: 23%;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

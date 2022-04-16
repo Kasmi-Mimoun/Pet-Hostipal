@@ -1,0 +1,128 @@
+
+
+.marg-top{
+  margin-top: 80px !important;
+  @include break(mobile){
+    margin-top: 40px !important;
+  }
+}
+.pad-80{
+  padding: 80px !important;
+  @include break(mobile){
+    padding: 40px 15px !important;
+  }
+}
+.about-top{
+  @include flex-sp-between;
+  @include break(mobile){
+    @include flex-column-center;
+    flex-direction: column-reverse;
+  }
+  .about-top-text{
+    width: 50%;
+    @include break(mobile){
+      width: 100%;
+    }
+    p{
+      margin: 30px 0 60px;
+      @include break(mobile){
+        text-align: justify;
+      }
+    }
+    a{
+      padding: 26px 50px;
+      border-radius: 40px;
+      background-color: $orange-color;
+      color: $light-color;
+      font-size: 22px;
+      font-weight: 600;
+      text-transform: capitalize;
+      @include break(tablette){
+        font-size: 18px;
+        padding: 20px 30px;
+      }
+      @include break(mobile){
+        font-size: 16px;
+        padding: 10px 16px;
+      }
+      svg{
+        width: 19px;
+        height: 19px;
+        @include break(tablette){
+          width: 14px;
+          height: 14px;
+        }
+        @include break(mobile){
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+  .about-top-img{
+    width: 40%;
+    @include break(mobile){
+      width: 80%;
+      margin-bottom: 30px;
+    }
+    img{
+      width: 100%;
+    }
+  }
+}
+.about-bottom{
+  width: 100%;
+  margin-top: 100px;
+  .info{
+    width: 100%;
+    padding:30px;
+    @include flex-sp-between;
+    @include break(mobile){
+      padding: 0 0 30px;
+      @include flex-column-center;
+    }
+    &.column-rev{
+      @include break(mobile){
+        flex-direction: column-reverse;
+      }
+    }
+    .info-img{
+      width: 200px;
+      text-align: center;
+      @include break(mobile){
+        width: 140px;
+      }
+      img{
+        width: 90%;
+        @include break(tablette){
+          width: 80%;
+        }
+      }
+    }
+    .right{
+      text-align: right !important;
+      @include break(mobile){
+        text-align: left !important;
+      }
+    }
+    .info-text{
+      width: calc(100% - 220px);
+      text-align: left;
+      @include break(mobile){
+        width: 100%;
+      }
+      h3{
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 1.8;
+        color: $black;
+        @include break(tablette){
+          font-size: 28px;
+        }
+        @include break(mobile){
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

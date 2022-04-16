@@ -1,0 +1,98 @@
+
+.marg-80{
+  margin: 80px auto 120px !important;
+  border: none !important;
+  @include break(mobile){
+    margin: 30px auto !important;
+  }
+}
+
+.services-service-categorie{
+  width: 100%;
+  border: 1px solid #E5E5E5;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  .container{
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 120px 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 80px;
+    @include break(mobile){
+      padding: 50px 15px;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 50px;
+    }
+    .s-cat{
+      position: relative;
+      padding: 50px;
+      border-radius: 80px;
+      background-color: #fff;
+      box-shadow: 5px 5px 25px rgba(0, 9, 88, 0.1);
+      @include break(mobile){
+        padding: 16px;
+        border-radius: 20px;
+      }
+      .icon_circle{
+        position: absolute;
+        left: -50px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        @include flex-center;
+        @include break(mobile){
+          width: 72px;
+          height: 72px;
+          left: 70%;
+          top: 50px;
+        }
+      }
+      .icon1{
+        background-color: #2DDAFC;
+        img{
+          margin: 0 0 10px 10px;
+        }
+      }
+      .icon2{
+        background-color: #FF7E47;
+      }
+      .icon3{
+        background-color: #FBBB30;
+      }
+      .icon4{
+        background-color: #9D61FE;
+      }
+      .icon5{
+        background-color: #2BED1B;
+      }
+      .icon6{
+        background-color: #FF4E6E;
+      }
+      .service_name{
+        font-size: 34px;
+        color: $dark-color;
+        font-weight: normal;
+        padding-left: 30px;
+        margin-bottom: 20px;
+        @include break(mobile){
+          font-size: 24px;
+          margin-top: 40px;
+          padding-left: 0;
+        }
+      }
+      p{
+        padding-left: 30px;
+        line-height: 1.5;
+        font-size: 18px;
+        color: #696969;
+        @include break(mobile){
+          padding-left: 0;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+section.contact{
+  width: 100%;
+  margin: 60px 0;
+  .container{
+    position: relative;
+    width: 100%;
+    max-width: 1260px;
+    min-height: 600px;
+    padding: 0 40px;
+    margin: 0 auto;
+    @include flex-sp-between;
+    overflow: hidden;
+    @include break(mobile){
+      padding: 0 15px;
+      @include flex-column-center;
+      flex-direction: column-reverse;
+    }
+    .contact-text{
+      width: 45%;
+      @include break(tablette){
+        position: absolute;
+        top: 0;
+        left: 40px;
+        min-width: 520px;
+        z-index: 2;
+      }
+      @include break(mobile){
+        width: 100%;
+      }
+      .sub-title{
+        font-size: 74px;
+        font-weight: 900;
+        @include break(mobile){
+          font-size: 52px;
+        }
+      }
+      .para_1{
+        margin: 10px 40px 30px 0;
+        font-size: 20px;
+        @include break(mobile){
+          margin: 20px 0;
+          font-size: 16px;
+          text-align: justify;
+        }
+      }
+    }
+    .contact-img{
+      width: 55%;
+      @include break(tablette){
+        position: absolute;
+        top: 0;
+        right: -40px;
+        min-width: 500px;
+      }
+      @include break(mobile){
+        width: 100%;
+      }
+      img{
+        width: 100%;
+      }
+    }
+  }
+}

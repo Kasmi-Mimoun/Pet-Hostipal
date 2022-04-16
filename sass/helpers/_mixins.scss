@@ -1,0 +1,131 @@
+// flex parent center child
+@mixin flex-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+// flex parent space-between child
+@mixin flex-sp-between {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// flex parent space-around child
+@mixin flex-sp-around {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+// flex parent flex-end align child
+@mixin flex-end {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+// flex parent column center
+@mixin flex-column-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// flex parent column center
+@mixin flex-column-star{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+// flex parent column center
+@mixin flex-column-end{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+
+// create a circle diametre param
+@mixin circle($diametre){
+  width: $diametre;
+  height: $diametre;
+  border-radius: 50%;
+}
+
+
+
+
+// media query breaks
+@mixin break($screen){
+  @if $screen == mobile {
+    @media (max-width: 767px){
+      @content;
+    }
+  } @else if $screen == tablette {
+    @media (min-width: 767.2px) and (max-width: 1150px){
+      @content;
+    }
+  } @else if $screen == laptop {
+    @media (min-width: 1150px){
+      @content;
+    }
+  }  
+}
+
+
+// animations 
+@mixin slide($from, $time) {
+  animation: $from $time ease-out;  
+}
+@keyframes down {
+  from{
+    transform: translateY(-50vh);
+  }
+  to{
+    transform: translateY(0);
+  }
+}
+@keyframes up {
+  from{
+    transform: translateY(100vh);
+  }
+  to{
+    transform: translateY(0);
+  }
+}
+@keyframes to-right {
+  from{
+    transform: translateX(-100vw);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+@keyframes to-left {
+  from{
+    transform: translateX(100vw);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+@keyframes fade-in {
+  0%{
+    opacity: 0;
+  }
+  70%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

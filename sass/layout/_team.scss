@@ -1,0 +1,45 @@
+.gallery-images{
+  .container{
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 20px;
+    @include break(mobile){
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+    .img-wrapper{
+      &:hover .team-overly{
+        height: 45%;
+      }
+      img{
+        width: 100%;
+      }
+      .team-overly{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0;
+        padding: 0 30px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(0,9,88,1) 100%);
+        color: $light-color;
+        transition: $med-tr;
+        .name-special{
+          @include flex-sp-between;
+          margin: 16px 0 16px;
+          h2{
+            font-size: 20px;
+          }
+          span{
+            font-size: 14px;
+            padding: 8px 10px;
+            background: rgba(46, 217, 255, 0.7);
+            border-radius: 10px;
+          }
+        }
+        p{
+          font-size: 17px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}

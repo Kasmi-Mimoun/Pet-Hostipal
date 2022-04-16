@@ -1,0 +1,60 @@
+// import variables
+@import '../helpers/variables';
+//import mixins
+@import '../helpers/mixins';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+  background: #FFFEFA;
+  text-align: left;
+}
+
+main{
+  width: 100%;
+  overflow: hidden;
+}
+.sub-title{
+  font-weight: 600;
+  font-size: 64px;
+  color: $dark-color;
+  @include break(tablette){
+    font-size: 54px;
+  }
+  @include break(mobile){
+    font-size: 30px;
+  }
+}
+.para_1{
+  font-size: 24px;
+  line-height: 1.7;
+  color: $dark-color;
+  @include break(tablette){
+    font-size: 22px;
+  }
+  @include break(mobile){
+    font-size: 16px;
+  }
+}
+.para_2{
+  font-size: 20px;
+  line-height: 1.6;
+  color: $dark-color-sec;
+  @include break(tablette){
+    font-size: 18px;
+  }
+  @include break(mobile){
+    font-size: 14px;
+  }
+}
+
+.test-wrapper::-webkit-scrollbar, .blog-wrapper::-webkit-scrollbar {
+  display: none;
+}
